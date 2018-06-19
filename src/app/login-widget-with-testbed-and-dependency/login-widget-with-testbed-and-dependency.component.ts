@@ -2,17 +2,18 @@ import { Component } from '@angular/core';
 import { LogInService } from '../log-in.service';
 
 @Component({
-  selector: 'app-log-in-widget-with-service',
-  template: `<button (click)="logIn()">Dare to click me!</button>
-                    <h1>{{message}}</h1>`
+  selector: 'app-login-widget-with-testbed-and-dependency',
+  templateUrl: './login-widget-with-testbed-and-dependency.component.html',
+  styleUrls: ['./login-widget-with-testbed-and-dependency.component.css']
 })
-export class LoginWidgetWithServiceComponent {
+export class LoginWidgetWithTestbedAndDependencyComponent {
   public isLoggedIn = false;
-  constructor(private logInService: LogInService){}
+
+  constructor(private logInService: LogInService){
+  }
 
   public logIn() {
     this.logInService.logInOnServer();
-
     this.isLoggedIn = true;
   }
 
@@ -22,4 +23,5 @@ export class LoginWidgetWithServiceComponent {
     }
     return 'you are logged out!';
   }
+
 }

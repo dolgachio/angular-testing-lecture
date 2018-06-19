@@ -44,4 +44,15 @@ describe('LoginWidgetWithTestbedComponent', () => {
     expect(h1.textContent).toBe('you are logged out!');
   });
 
+  it('should have a default heading with debug element', () => {
+    sut.isLoggedIn = true;
+    fixture.detectChanges();
+
+    const debugElement: DebugElement = fixture.debugElement;
+    const h1DebugElement = debugElement.query(By.css('h1'));
+    const h1 = h1DebugElement.nativeElement;
+
+    expect(h1.textContent).toBe('you are logged in!');
+  });
+
 });
