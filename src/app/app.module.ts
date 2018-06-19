@@ -7,6 +7,7 @@ import { LoginWidgetWithServiceComponent } from './login-widget-with-service/log
 import { LoginWidgetWithTestbedComponent } from './login-widget-with-testbed/login-widget-with-testbed.component';
 import { LoginWidgetWithTestbedAndDependencyComponent } from './login-widget-with-testbed-and-dependency/login-widget-with-testbed-and-dependency.component';
 import { LoginWidgetTestCasesComponent } from './login-widget-test-cases/login-widget-test-cases.component';
+import { PublicationCardComponent } from './publication-card/publication-card.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LoginWidgetTestCasesComponent } from './login-widget-test-cases/login-w
     LoginWidgetWithServiceComponent,
     LoginWidgetWithTestbedComponent,
     LoginWidgetWithTestbedAndDependencyComponent,
-    LoginWidgetTestCasesComponent
+    LoginWidgetTestCasesComponent,
+    PublicationCardComponent
   ],
   imports: [
     BrowserModule
