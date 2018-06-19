@@ -2,7 +2,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginWidgetWithTestbedAndDependencyComponent } from './login-widget-with-testbed-and-dependency.component';
 import { LogInService } from '../log-in.service';
-import {log} from "util";
 
 describe('LoginWidgetWithTestbedAndDependencyComponent', () => {
   let sut: LoginWidgetWithTestbedAndDependencyComponent;
