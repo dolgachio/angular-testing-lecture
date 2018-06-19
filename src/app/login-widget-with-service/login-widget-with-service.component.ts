@@ -4,7 +4,7 @@ import { LogInService } from './log-in.service';
 @Component({
   selector: 'app-log-in-widget-with-service',
   template: `<button (click)="logIn()">Dare to click me!</button>
-                    <span>{{message}}</span>`
+                    <h1>{{message}}</h1>`
 })
 export class LoginWidgetWithServiceComponent {
   public isLoggedIn = false;
