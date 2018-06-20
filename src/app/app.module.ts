@@ -8,6 +8,10 @@ import { LoginWidgetWithTestbedComponent } from './login-widget-with-testbed/log
 import { LoginWidgetWithTestbedAndDependencyComponent } from './login-widget-with-testbed-and-dependency/login-widget-with-testbed-and-dependency.component';
 import { LoginWidgetTestCasesComponent } from './login-widget-test-cases/login-widget-test-cases.component';
 import { PublicationCardComponent } from './publication-card/publication-card.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserPictureComponent } from './user-profile/user-picture/user-picture.component';
+import { UserMenuComponent } from './user-profile/user-menu/user-menu.component';
+import { UserInfoComponent } from './user-profile/user-info/user-info.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,12 @@ import { PublicationCardComponent } from './publication-card/publication-card.co
     LoginWidgetWithTestbedComponent,
     LoginWidgetWithTestbedAndDependencyComponent,
     LoginWidgetTestCasesComponent,
-    PublicationCardComponent
+    PublicationCardComponent,
+
+    UserProfileComponent,
+    UserPictureComponent,
+    UserMenuComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule

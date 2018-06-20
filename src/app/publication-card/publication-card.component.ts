@@ -1,5 +1,5 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {Publication} from "./publication.model";
+import {Publication} from "../shared/publication.model";
 
 @Component({
   selector: 'app-publication-card',

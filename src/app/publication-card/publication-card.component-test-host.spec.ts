@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PublicationCardComponent } from './publication-card.component';
-import { Publication } from './publication.model';
+import { Publication } from '../shared/publication.model';
 import { By } from "@angular/platform-browser";
 import {Component} from "@angular/core";
 
