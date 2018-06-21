@@ -49,6 +49,7 @@ describe('PublicationCardComponent', () => {
     fixture.detectChanges();
 
     const expectedLikedPublication = { id: 1, title: 'My dinned', imageSrc: 'mushrooms.png' };
+
     const likeButton = fixture.debugElement.query(By.css('.like-button'));
     likeButton.triggerEventHandler('click', null);
 

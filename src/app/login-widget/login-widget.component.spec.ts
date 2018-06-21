@@ -4,7 +4,7 @@ describe('LoginWidgetComponent', () => {
   let sut: LoginWidgetComponent;
 
   beforeEach(() => {
-    sut = new LoginWidgetComponent
+    sut = new LoginWidgetComponent();
   });
 
   it('should show default message when logged out', () => {

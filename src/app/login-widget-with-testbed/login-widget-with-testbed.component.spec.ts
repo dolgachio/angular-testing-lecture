@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginWidgetWithTestbedComponent } from './login-widget-with-testbed.component';
-import {DebugElement} from "@angular/core";
-import {By} from "@angular/platform-browser";
+import { DebugElement } from '@angular/core';
+import { By } from '@angular/platform-browser';
 
 describe('LoginWidgetWithTestbedComponent', () => {
   let sut: LoginWidgetWithTestbedComponent;

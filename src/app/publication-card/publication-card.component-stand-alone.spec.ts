@@ -14,7 +14,6 @@ describe('PublicationCardComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ PublicationCardComponent ]
     })
-    .compileComponents();
   }));
 
   beforeEach(() => {
