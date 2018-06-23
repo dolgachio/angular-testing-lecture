@@ -1,14 +1,15 @@
 import { LoginWidgetWithServiceComponent } from './login-widget-with-service.component';
+import { LogInService } from '../log-in.service';
 
 describe('LoginWidgetWithServiceComponent(', () => {
   let sut: LoginWidgetWithServiceComponent;
 
-  let logInService;
+  let logInService: Partial<LogInService>;
 
   beforeEach(() => {
-    logInService = jasmine.createSpyObj('logInService', ['logInOnServer']);
+    logInService = { logInOnServer: jasmine.createSpy('logInOnServer') };
 
-    sut = new LoginWidgetWithServiceComponent(logInService);
+    sut = new LoginWidgetWithServiceComponent(logInService as LogInService);
   });
 
   it('should log in on server', () => {

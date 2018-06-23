@@ -1,15 +1,15 @@
 <section>
   <h1>User profile</h1>
 
-  <user-picture></user-picture>
-  <user-info></user-info>
+  <app-user-picture></app-user-picture>
+  <app-user-info></app-user-info>
 
   <article>
-    <user-menu [some-value]="'test'"></user-menu>
+    <app-user-menu></app-user-menu>
   </article>
 
-  <publication-card *ngFor="let publication of userPublications"
+  <app-publication-card *ngFor="let publication of userPublications"
     [publication]="publication">
-  </publication-card>
+  </app-publication-card>
 
 </section>

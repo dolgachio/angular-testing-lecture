@@ -8,10 +8,10 @@ describe('LoginWidgetTestCasesComponent', () => {
   let sut: LoginWidgetTestCasesComponent;
   let fixture: ComponentFixture<LoginWidgetTestCasesComponent>;
 
-  let logInService;
+  let logInService: Partial<LogInService>;
 
   beforeEach(async(() => {
-    logInService = jasmine.createSpyObj('logInService', ['logInOnServer']);
+    logInService = { logInOnServer: jasmine.createSpy('logInOnServer') };
 
     TestBed.configureTestingModule({
       declarations: [ LoginWidgetTestCasesComponent ],
