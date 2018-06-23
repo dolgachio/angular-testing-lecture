@@ -9,15 +9,14 @@ describe('LoginWidgetWithTestbedAndDependencyComponent', () => {
 
   let logInService: Partial<LogInService>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     logInService = { logInOnServer: jasmine.createSpy('logInOnServer') };
 
     TestBed.configureTestingModule({
       declarations: [ LoginWidgetWithTestbedAndDependencyComponent ],
       providers: [{provide: LogInService, useValue: logInService}]
     })
-    .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LoginWidgetWithTestbedAndDependencyComponent);

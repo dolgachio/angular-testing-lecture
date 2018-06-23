@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginWidgetTestCasesComponent } from './login-widget-test-cases.component';
 import { LogInService } from '../log-in.service';
@@ -10,15 +10,14 @@ describe('LoginWidgetTestCasesComponent', () => {
 
   let logInService: Partial<LogInService>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     logInService = { logInOnServer: jasmine.createSpy('logInOnServer') };
 
     TestBed.configureTestingModule({
       declarations: [ LoginWidgetTestCasesComponent ],
       providers: [{provide: LogInService, useValue: logInService}]
     })
-      .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LoginWidgetTestCasesComponent);

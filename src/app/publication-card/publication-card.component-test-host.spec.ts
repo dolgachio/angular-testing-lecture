@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PublicationCardComponent } from './publication-card.component';
 import { Publication } from '../shared/publication.model';
@@ -29,12 +29,11 @@ describe('PublicationCardComponent', () => {
 
   let publication: Publication;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ PublicationCardComponent, TestHostComponent ]
     })
-    .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TestHostComponent);
