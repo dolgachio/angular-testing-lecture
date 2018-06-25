@@ -4,13 +4,13 @@ import { PublicationCardComponent } from './publication-card.component';
 import { Publication } from '../shared/publication.model';
 import { By } from "@angular/platform-browser";
 import {Component} from "@angular/core";
+import { PublicationLogService } from './publication-log.service';
 
 /* When components logic is complicated we can usr Test-host approach
 * <app-publication-card *ngFor="let publication in allPublications"
         [publication]="publication" (like)="onLiked($event)">
  </app-publication-card>`
 * */
-
 @Component({
   template: `
     <app-publication-card
@@ -29,9 +29,17 @@ describe('PublicationCardComponent', () => {
 
   let publication: Publication;
 
+  let publicationLogService: Partial<PublicationLogService>;
+
   beforeEach(() => {
+    publicationLogService = {
+      logPublication: jasmine.createSpy('logPublication')
+    };
+
     TestBed.configureTestingModule({
-      declarations: [ PublicationCardComponent, TestHostComponent ]
+      declarations: [ PublicationCardComponent, TestHostComponent ],
+      providers: [{ useValue: publicationLogService,
+        provide: PublicationLogService }]
     })
   });
 
@@ -40,8 +48,12 @@ describe('PublicationCardComponent', () => {
     testHost = fixture.componentInstance;
   });
 
-  it('should create', () => {
-    expect(testHost).toBeTruthy();
+  describe('ngOnChanges', () => {
+    it('should log publication', () => {
+      fixture.detectChanges();
+
+      expect(publicationLogService.logPublication).toHaveBeenCalled();
+    });
   });
 
   it('should raise publication like', () => {

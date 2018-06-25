@@ -12,6 +12,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserPictureComponent } from './user-profile/user-picture/user-picture.component';
 import { UserMenuComponent } from './user-profile/user-menu/user-menu.component';
 import { UserInfoComponent } from './user-profile/user-info/user-info.component';
+import { PublicationLogService } from './publication-card/publication-log.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { UserInfoComponent } from './user-profile/user-info/user-info.component'
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [PublicationLogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
