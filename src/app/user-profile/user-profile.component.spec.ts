@@ -10,7 +10,7 @@ describe('UserProfileComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ UserProfileComponent ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      schemas: [NO_ERRORS_SCHEMA]
     })
   });
 

@@ -7,8 +7,10 @@ describe('LoginWidgetComponent', () => {
     sut = new LoginWidgetComponent();
   });
 
-  it('should show default message when logged out', () => {
-    expect(sut.message).toBe('you are logged out!');
+  describe('some method', () => {
+    it('should show default message when logged out', () => {
+      expect(sut.message).toBe('you are logged out!');
+    });
   });
 
   it('should show welcome message when logged in', () => {

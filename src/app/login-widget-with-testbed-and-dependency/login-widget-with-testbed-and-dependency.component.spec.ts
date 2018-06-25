@@ -1,7 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginWidgetWithTestbedAndDependencyComponent } from './login-widget-with-testbed-and-dependency.component';
 import { LogInService } from '../log-in.service';
+import { By } from '@angular/platform-browser';
 
 describe('LoginWidgetWithTestbedAndDependencyComponent', () => {
   let sut: LoginWidgetWithTestbedAndDependencyComponent;
@@ -29,11 +30,10 @@ describe('LoginWidgetWithTestbedAndDependencyComponent', () => {
   });
 
   it('should call server', () => {
-    sut.logIn();
+    const button = fixture.debugElement.query(By.css('.dare-button'));
+    button.triggerEventHandler('click', null);
 
-    let logInServiceFromTestBed = TestBed.get(LogInService);
-
-    expect(logInServiceFromTestBed.logInOnServer).toHaveBeenCalled();
+    expect(logInService.logInOnServer).toHaveBeenCalled();
   });
 
 });
