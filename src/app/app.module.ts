@@ -12,6 +12,8 @@ import { UserPictureComponent } from './components-lecture/user-profile/user-pic
 import { UserMenuComponent } from './components-lecture/user-profile/user-menu/user-menu.component';
 import { UserInfoComponent } from './components-lecture/user-profile/user-info/user-info.component';
 import { PublicationLogService } from './components-lecture/publication-card/publication-log.service';
+import { ShowThemAllComponent } from './modules-services-lecture/show-them-all/show-them-all.component';
+import { ShowThemAllStandaloneComponent } from './modules-services-lecture/show-them-all-standalone/show-them-all-standalone.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { PublicationLogService } from './components-lecture/publication-card/pub
     UserProfileComponent,
     UserPictureComponent,
     UserMenuComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    ShowThemAllComponent,
+    ShowThemAllStandaloneComponent
   ],
   imports: [
     BrowserModule

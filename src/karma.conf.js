@@ -27,7 +27,7 @@ module.exports = function (config) {
           functions: 80
       }
     },
-    reporters: ['nyan'],
+    reporters: ['nyan', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
