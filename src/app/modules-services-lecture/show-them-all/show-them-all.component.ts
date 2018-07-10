@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CompareAllService } from '../compare-all.service';
-import {Hero} from "../hero.model";
+import { Hero } from '../hero.model';
 
 @Component({
   selector: 'app-show-them-all',

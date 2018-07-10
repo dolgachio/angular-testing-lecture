@@ -12,14 +12,15 @@ describe('ShowThemAllStandaloneComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShowThemAllStandaloneComponent ],
+      declarations: [ ShowThemAllStandaloneComponent ]
     })
-      .overrideComponent(ShowThemAllStandaloneComponent, {
-        set: {
-          providers: [{ provide: CompareAllService, useValue: {} }]
-        }
-      })
-      .compileComponents();
+    .overrideComponent(ShowThemAllStandaloneComponent, {
+      set: {
+        providers: [{ provide: CompareAllService, useValue: {} }]
+      },
+      /*add: {...},
+      remove: {...}*/
+    })
   }));
 
   beforeEach(() => {
