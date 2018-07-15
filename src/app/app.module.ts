@@ -14,6 +14,7 @@ import { UserInfoComponent } from './components-lecture/user-profile/user-info/u
 import { PublicationLogService } from './components-lecture/publication-card/publication-log.service';
 import { ShowThemAllComponent } from './modules-services-lecture/show-them-all/show-them-all.component';
 import { ShowThemAllStandaloneComponent } from './modules-services-lecture/show-them-all-standalone/show-them-all-standalone.component';
+import { BookShelfComponent } from './change-detection-lecture/book-shelf/book-shelf.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ShowThemAllStandaloneComponent } from './modules-services-lecture/show-
     UserMenuComponent,
     UserInfoComponent,
     ShowThemAllComponent,
-    ShowThemAllStandaloneComponent
+    ShowThemAllStandaloneComponent,
+    BookShelfComponent
   ],
   imports: [
     BrowserModule
