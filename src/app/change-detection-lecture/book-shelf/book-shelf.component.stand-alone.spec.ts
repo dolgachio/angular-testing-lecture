@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BookShelfComponent } from './book-shelf.component';
 
-xdescribe('BookShelfComponent', () => {
+describe('BookShelfComponent', () => {
   let component: BookShelfComponent;
   let fixture: ComponentFixture<BookShelfComponent>;
 
@@ -20,7 +20,7 @@ xdescribe('BookShelfComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should change book if changed', () => {
+  it('should display book', () => {
     component.book = { title: 'Viy', id: 666, isSpecialOffer: false };
     fixture.detectChanges();
 
