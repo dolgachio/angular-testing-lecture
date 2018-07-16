@@ -19,7 +19,7 @@ class TestHostComponent {
 }
 
 describe('BookShelfComponent', () => {
-  let component: TestHostComponent;
+  let testHostComponent: TestHostComponent;
   let fixture: ComponentFixture<TestHostComponent>;
 
   beforeEach(async(() => {
@@ -31,12 +31,12 @@ describe('BookShelfComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TestHostComponent);
-    component = fixture.componentInstance;
+    testHostComponent = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should display book', () => {
-    component.book = { title: 'Viy', id: 666, isSpecialOffer: false };
+    testHostComponent.book = { title: 'Viy', id: 666, isSpecialOffer: false };
     fixture.detectChanges();
 
     const h3 = fixture.nativeElement.querySelector('h3');
@@ -44,7 +44,7 @@ describe('BookShelfComponent', () => {
   });
 
   it('should show the special offer message', () => {
-    component.book = { title: 'Mu-Mu', id: 666, isSpecialOffer: true };
+    testHostComponent.book = { title: 'Mu-Mu', id: 666, isSpecialOffer: true };
     fixture.detectChanges();
 
     const footer = fixture.nativeElement.querySelector('footer');
@@ -52,7 +52,7 @@ describe('BookShelfComponent', () => {
   });
 
   it('should hide special offer message', () => {
-    component.book = { title: 'Mu-Mu', id: 666, isSpecialOffer: false };
+    testHostComponent.book = { title: 'Mu-Mu', id: 666, isSpecialOffer: false };
     fixture.detectChanges();
 
     const footer = fixture.nativeElement.querySelector('footer');
@@ -62,13 +62,13 @@ describe('BookShelfComponent', () => {
   describe('takeTheBook', () => {
     it('should take the book with exact id', () => {
       const book = { title: 'The Count of Monte Cristo', id: 888, isSpecialOffer: false };
-      component.book = book;
+      testHostComponent.book = book;
       fixture.detectChanges();
 
       const button = fixture.debugElement.query(By.css('button'));
       button.triggerEventHandler('click', null);
 
-      expect(component.takenBookId).toBe(book.id);
+      expect(testHostComponent.takenBookId).toBe(book.id);
     });
   });
 });

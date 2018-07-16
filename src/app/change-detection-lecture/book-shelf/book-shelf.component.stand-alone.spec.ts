@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BookShelfComponent } from './book-shelf.component';
+import { ChangeDetectionStrategy } from "@angular/core";
 
 describe('BookShelfComponent', () => {
   let component: BookShelfComponent;
